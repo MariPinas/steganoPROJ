@@ -15,6 +15,7 @@ def menu():
         match option:
             case '1':
                 print("\n --- Esconder Mensagem")
+                hide_message()
             case '2':
                 print("\n --- Revelar Mensagem")
                 mensagem_revelada = 'Mensagem Revelada'
