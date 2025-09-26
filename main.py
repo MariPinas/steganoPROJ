@@ -1,17 +1,18 @@
 from hide import *
 from reveal import *
+from rich import print
 
 def menu():
     while True:
         print("\n" + "="*25)
-        print("   Esteganografia")
+        print("[italic red]Esteganografia[/italic red]")
         print("="*25)
         print("1. Esconder mensagem em imagem")
         print("2. Revelar mensagem da imagem")
         print("3. Sair")
-        user_option_str = input("Insira uma opção: ")
+        option = input("Insira uma opção: ")
 
-        match user_option_str:
+        match option:
             case '1':
                 print("\n --- Esconder Mensagem")
             case '2':
