@@ -1,8 +1,13 @@
 import cv2
 from rich import print
+import os
 
 def reveal_message():
     file_name = input("Insira o nome do arquivo da imagem: ")
+    
+    if not os.path.isfile(file_name):
+        print("[red]Arquivo nao encontrado![/red]")
+        return
     
     read_image = cv2.imread(file_name)
 
@@ -30,6 +35,10 @@ def reveal_message():
                 binary_message = binary_message[8:]
                 char = chr(int(byte, 2))
                 decoded_message += char
+
+                if len(decoded_message) > 10000:
+                    print("[yellow]Mensagem muito longa ou delimitador não encontrado. Busca encerrada![/yellow]")
+                    return decoded_message
 
                 if decoded_message.endswith("#####"):
                     decoded_message = decoded_message.replace("#####", "")

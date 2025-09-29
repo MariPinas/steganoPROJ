@@ -16,10 +16,11 @@ def menu():
             case '1':
                 print("\n --- Esconder Mensagem")
                 hide_message()
+                print("\n---------------------------------------")
             case '2':
                 print("\n --- Revelar Mensagem")
                 reveal_message()
-                print("\n-----------------------------")
+                print("\n---------------------------------------")
             case '3':
                 print('Finalizando Esteganografia')
                 break

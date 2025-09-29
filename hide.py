@@ -1,5 +1,6 @@
 import cv2
 from rich import print
+import os
 
 def hide_message():
     message = input("Insira uma mensagem: ") + "#####"
@@ -35,6 +36,9 @@ def hide_message():
                 blue_layer[i, j] = pixel
                 counter += 1
     
+    base_name = os.path.splitext(file_name)[0]  # pega o nome do arquivo sem a extensao
+    output_name = f"{base_name}_secret.png"     # cria o nome do arquivo com o nome original + _secret.png
+
     hide_image = cv2.merge((blue_layer, g, r))
-    cv2.imwrite('secret_image.png', hide_image)
-    print("[green]Mensagem escondida em 'secret_image.png' com sucesso![/green]")
+    cv2.imwrite(output_name, hide_image)
+    print(f"[green]Mensagem escondida em '{output_name}' com sucesso![/green]")
