@@ -1,0 +1,32 @@
+# Ambiente virtual
+.venv/
+venv/
+ENV/
+env/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Configuração do VSCode / IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados pelo projeto
+secret_image.png
+*.png
+*.jpg
+*.jpeg

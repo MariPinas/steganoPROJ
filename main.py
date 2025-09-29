@@ -18,9 +18,8 @@ def menu():
                 hide_message()
             case '2':
                 print("\n --- Revelar Mensagem")
-                mensagem_revelada = 'Mensagem Revelada'
-                print("Mensagem revelada: "), mensagem_revelada
-                print("-----------------------------")
+                reveal_message()
+                print("\n-----------------------------")
             case '3':
                 print('Finalizando Esteganografia')
                 break
