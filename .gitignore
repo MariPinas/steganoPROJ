@@ -26,6 +26,6 @@ __pycache__/
 Thumbs.db
 
 # Arquivos gerados pelo projeto
-#*.png
-#*.jpg
-#*.jpeg
+*.png
+*.jpg
+*.jpeg
