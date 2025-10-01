@@ -5,7 +5,7 @@ from rich import print
 def menu():
     while True:
         print("\n" + "="*25)
-        print("[italic red]Esteganografia[/italic red]")
+        print("[italic green]Esteganografia[/italic green]")
         print("="*25)
         print("1. Esconder mensagem em imagem")
         print("2. Revelar mensagem da imagem")
