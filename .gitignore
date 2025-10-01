@@ -26,9 +26,6 @@ __pycache__/
 Thumbs.db
 
 # Arquivos gerados pelo projeto
-*.png
-*.jpg
-*.jpeg
-
-# arquivos da pasta assets
-./assets
+#*.png
+#*.jpg
+#*.jpeg
