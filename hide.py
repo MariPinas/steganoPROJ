@@ -9,8 +9,17 @@ def hide_message():
     read_image = cv2.imread(file_name)
 
     if read_image is None:
-        print("[red]Imagem nao encontrada![/red]")
-        return
+        alt_path = os.path.join("assets", file_name)
+        read_image = cv2.imread(alt_path)
+    
+        if read_image is None:
+            print("[red]Imagem nao encontrada![/red]")
+            return
+        else:
+            print(f"[yellow]Imagem encontrada na pasta 'assets': {alt_path}")
+            file_name = alt_path
+    else:
+        print("[green]Imagem encontrada com sucesso![/green]")
     
     #image_resize = cv2.resize(read_image, (512, 512)) // comentei pra deixar a img do tamanho real que ela é
     binary_message = ''.join([format(ord(char), '08b') for char in message])

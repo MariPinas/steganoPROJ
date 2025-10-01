@@ -6,14 +6,21 @@ def reveal_message():
     file_name = input("Insira o nome do arquivo da imagem: ")
     
     if not os.path.isfile(file_name):
-        print("[red]Arquivo nao encontrado![/red]")
-        return
+        alt_path = os.path.join("assets", file_name) 
+        if not os.path.isfile(alt_path):
+            print("[red]Arquivo nao encontrado![/red]")
+            return
+        else:
+            print(f"[yellow]Imagem encontrada na pasta 'assets': {alt_path}")
+            file_name = alt_path
     
     read_image = cv2.imread(file_name)
 
     if read_image is None:
-        print("[red]Imagem nao encontrada![/red]")
+        print("[red]Imagem inválida![/red]")
         return
+    else:
+        print("[green]Imagem válida! [/green]")
     
     b, g, r = cv2.split(read_image)
     blue_layer = b.copy()
