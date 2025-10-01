@@ -1,6 +1,6 @@
-# Programa de Esteganografia – Segurança da Infomação 
+# Programa de Esteganografia
 
-Este repositório comtém o código referente a esteganografia. É possível esconder uma mensagem em uma imagem e depois revelar o texto escondido. Este é um trabalho de Segurança da Informação do curso **Análise e Desenvolvimento de Sistemas**
+Este repositório comtém o código referente a esteganografia. É possível esconder uma mensagem em uma imagem e depois revelar o texto escondido. Este é um trabalho de Segurança da Informação do curso **Análise e Desenvolvimento de Sistemas**.
 
 -  **`Integrantes`**:
     - Andriel Henrique
