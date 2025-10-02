@@ -21,7 +21,6 @@ def hide_message():
     else:
         print("[green]Imagem encontrada com sucesso![/green]")
     
-    #image_resize = cv2.resize(read_image, (512, 512)) // comentei pra deixar a img do tamanho real que ela é
     binary_message = ''.join([format(ord(char), '08b') for char in message])
     lenght_message = len(binary_message)
 
